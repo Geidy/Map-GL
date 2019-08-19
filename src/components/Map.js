@@ -8,8 +8,8 @@ class Map extends React.Component {
     
         state = {
             viewport: {
-                width: 400,
-                height: 400,
+                width: '100%',
+                height: '100vh',
                 latitude: 35.335807,
                 longitude: 24.464627,
                 zoom: 8
@@ -28,6 +28,7 @@ class Map extends React.Component {
 
 
             return(
+                <div>
             <Marker latitude='35.335807' longitude='24.464627'>
                 <Pin onClick={() => {
                         this.setState({
@@ -35,7 +36,17 @@ class Map extends React.Component {
                             
                         })
                     }} /> 
-            </Marker> )
+            </Marker> 
+            <Marker latitude='35.205584'longitude='24.542791'>
+                <Pin  geologicalWonders  />
+            </Marker>
+            
+            <Marker latitude='35.264424'longitude='24.482962'>
+                <Pin  geologicalWonders  />
+            </Marker>
+            </div>
+            )
+            
         }
         
     
